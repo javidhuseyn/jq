@@ -1,0 +1,101 @@
+$mainColor:#00a99d;
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#chat-mini{
+    width: 200px;
+    height: 40px;
+    background-color: $mainColor;
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+#chat{
+    display: none;
+    position: fixed;
+    bottom: 0%;
+    right: 30px;
+    width: 400px;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid white;
+    &.active{
+        display: block;
+    }
+    header{
+        background-color: $mainColor;
+        padding: 10px;
+        color: white;
+        width: 400px;
+         border-radius: 5px 5px 0px 0px;
+         .upper .header-icon{
+             float: right;
+             padding: 3px 10px;
+             cursor: pointer;
+         }
+         .lower{
+             padding: 10px 30px;
+             font-size: 0.9em;
+             text-align: center;
+         }
+    }
+    main{
+        height: 300px;
+        background-color: white;
+        color: black;
+        overflow: auto;
+        .message{
+            padding: 10px;
+            max-width: 80%;
+            min-width: 51%;
+            border-radius: 10px;
+            font-size: 0.9em;
+            position: relative;
+            margin:20px 15px;
+      
+           &.support{
+               background-color: $mainColor;
+               color: white;
+               float: left;
+               &::before{
+                content: "";
+                position: absolute;
+                top: 14px;
+                left: -16px;
+                border: 8px solid transparent;
+                border-right-color: #00a99d;
+            }
+        }
+            &.user{
+                background-color: grey;
+                color: #333;
+                float: right;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 14px;
+                    right: 16px;
+                    border: 8px solid transparent;
+                    border-left-color: grey;
+                }
+            }
+           }
+            .time{
+                position:absolute;
+                bottom: -36px;
+                color: lighten(black,30%);
+                right: 9px;
+                font-size: 0.9em;
+                
+            }
+        }
+    }
+
+body{
+    background-image: url(../photo1/back.jpg)
+}

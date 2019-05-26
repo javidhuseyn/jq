@@ -1,0 +1,87 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box; }
+
+#chat-mini {
+  width: 200px;
+  height: 40px;
+  background-color: #00a99d;
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+  border-radius: 20px 20px 0 0;
+  color: white;
+  padding: 10px;
+  cursor: pointer; }
+
+#chat {
+  display: none;
+  position: fixed;
+  bottom: 0%;
+  right: 30px;
+  width: 400px;
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid white; }
+  #chat.active {
+    display: block; }
+  #chat header {
+    background-color: #00a99d;
+    padding: 10px;
+    color: white;
+    width: 400px;
+    border-radius: 5px 5px 0px 0px; }
+    #chat header .upper .header-icon {
+      float: right;
+      padding: 3px 10px;
+      cursor: pointer; }
+    #chat header .lower {
+      padding: 10px 30px;
+      font-size: 0.9em;
+      text-align: center; }
+  #chat main {
+    height: 300px;
+    background-color: white;
+    color: black;
+    overflow: auto; }
+    #chat main .message {
+      padding: 10px;
+      max-width: 80%;
+      min-width: 51%;
+      border-radius: 10px;
+      font-size: 0.9em;
+      position: relative;
+      margin: 20px 15px; }
+      #chat main .message.support {
+        background-color: #00a99d;
+        color: white;
+        float: left; }
+        #chat main .message.support::before {
+          content: "";
+          position: absolute;
+          top: 14px;
+          left: -16px;
+          border: 8px solid transparent;
+          border-right-color: #00a99d; }
+      #chat main .message.user {
+        background-color: grey;
+        color: #333;
+        float: right; }
+        #chat main .message.user::after {
+          content: "";
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          border: 8px solid transparent;
+          border-left-color: grey; }
+    #chat main .time {
+      position: absolute;
+      bottom: -36px;
+      color: #4d4d4d;
+      right: 9px;
+      font-size: 0.9em; }
+
+body {
+  background-image: url(../photo1/back.jpg); }
+
+/*# sourceMappingURL=style.css.map */
